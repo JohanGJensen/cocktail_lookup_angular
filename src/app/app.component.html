@@ -1,4 +1,8 @@
 <style>
+  .h1-headline {
+    margin-bottom: 1em;
+  }
+
   /* Responsive Styles */
   @media screen and (max-width: 767px) {}
 
@@ -9,7 +13,8 @@
 <div class="content" role="main">
   <h1 class="h1-headline">Cocktails:</h1>
 
-  <app-cocktail></app-cocktail>
+  <app-cocktail *ngFor="let drink of drinks" [cocktail]="drink">
+  </app-cocktail>
 </div>
 
 <!-- <router-outlet></router-outlet> -->

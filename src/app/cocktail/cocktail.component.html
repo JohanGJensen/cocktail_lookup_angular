@@ -1,6 +1,7 @@
-<mat-card>
+<mat-card class="cocktail-card">
   <mat-card-header>
-    <mat-card-title>Moscow Mule</mat-card-title>
-    <mat-card-content>this cocktail is easy to make</mat-card-content>
+    <mat-card-title>{{cocktail.strDrink}}</mat-card-title>
   </mat-card-header>
+  <img mat-card-image src="{{cocktail.strDrinkThumb}}" alt="{{cocktail.strDrink}}">
+  <mat-card-content>{{cocktail.strInstructions}}</mat-card-content>
 </mat-card>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { BrowserModule } from '@angular/platform-browser';
 import { CocktailComponent } from './cocktail.component';
 
 @NgModule({
@@ -8,6 +9,7 @@ import { CocktailComponent } from './cocktail.component';
   ],
   imports: [
     MatCardModule,
+    BrowserModule
   ],
   exports: [CocktailComponent],
 })

@@ -7,12 +7,15 @@ import { AppService } from './app.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Cocktail Lookup';
+  drinks: any[] = [];
 
   constructor(private service: AppService) {
     this.service.getCocktailsByName('margarita')
       .then((response) => {
-        console.log(response);
+        if (response.data?.drinks?.length) {
+          this.drinks = response.data.drinks;
+          console.log(this.drinks);
+        }
       })
       .catch((error) => console.error(error));
   }
