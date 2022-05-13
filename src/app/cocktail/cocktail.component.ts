@@ -15,7 +15,6 @@ export class CocktailComponent implements OnInit {
 
   ngOnInit(): void {
     this.getIngredients();
-    console.log(this.ingredients);
   }
 
   getIngredients(): void {
