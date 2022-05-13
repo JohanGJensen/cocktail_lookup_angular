@@ -11,7 +11,8 @@
     <mat-card-title>Ingredients:</mat-card-title>
     <mat-card-content>
       <div style="width: 100%;" *ngFor="let ingredient of ingredients">
-        {{ingredient.ingredient}} - {{ingredient.amount}}
+        <span>{{ingredient.ingredient}}</span>
+        <span *ngIf="ingredient.amount !== ''"> - {{ingredient.amount}}</span>
       </div>
     </mat-card-content>
   </mat-card-content>
