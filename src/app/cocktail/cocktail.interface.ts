@@ -40,3 +40,8 @@ export interface ICocktail {
   strMeasure14?: string;
   strMeasure15?: string;
 }
+
+export interface Ingredient {
+  ingredient: string;
+  amount: string;
+}

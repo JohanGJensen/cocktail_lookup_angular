@@ -9,7 +9,11 @@
 
   <mat-card-content>
     <mat-card-title>Ingredients:</mat-card-title>
-    <mat-card-content></mat-card-content>
+    <mat-card-content>
+      <div style="width: 100%;" *ngFor="let ingredient of ingredients">
+        {{ingredient.ingredient}} - {{ingredient.amount}}
+      </div>
+    </mat-card-content>
   </mat-card-content>
 
   <mat-card-content>
