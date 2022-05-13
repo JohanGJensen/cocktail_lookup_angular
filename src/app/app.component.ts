@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'cocktail_lookup';
+  title = 'Cocktail Lookup';
+
+  constructor(private service: AppService) {
+    this.service.getCocktailsByName('margarita')
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => console.error(error));
+  }
 }
