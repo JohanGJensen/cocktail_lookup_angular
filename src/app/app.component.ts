@@ -14,7 +14,6 @@ export class AppComponent {
       .then((response) => {
         if (response.data?.drinks?.length) {
           this.drinks = response.data.drinks;
-          console.log(this.drinks);
         }
       })
       .catch((error) => console.error(error));

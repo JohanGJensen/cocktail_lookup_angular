@@ -1,7 +1,22 @@
-<mat-card class="cocktail-card">
+<mat-card class="cocktail-card" *ngIf="cocktail">
+
   <mat-card-header>
     <mat-card-title>{{cocktail.strDrink}}</mat-card-title>
+    <mat-card-subtitle>{{cocktail.strAlcoholic}}</mat-card-subtitle>
   </mat-card-header>
+
   <img mat-card-image src="{{cocktail.strDrinkThumb}}" alt="{{cocktail.strDrink}}">
-  <mat-card-content>{{cocktail.strInstructions}}</mat-card-content>
+
+  <mat-card-content>
+    <mat-card-title>Ingredients:</mat-card-title>
+    <mat-card-content></mat-card-content>
+  </mat-card-content>
+
+  <mat-card-content>
+    <mat-card-title>Instructions:</mat-card-title>
+    <mat-card-content>
+      {{cocktail.strInstructions}}
+    </mat-card-content>
+  </mat-card-content>
+
 </mat-card>
