@@ -10,6 +10,7 @@
     "deploy": "gh-pages -d dist"
   },
   "private": true,
+  "homepage": "https://github.com/JohanGJensen/cocktail_lookup_angular",
   "dependencies": {
     "@angular/animations": "~13.3.0",
     "@angular/cdk": "^13.3.7",
