@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,7 +19,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     BrowserModule,
     CocktailModule,
     MatToolbarModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
     // AppRoutingModule,
     // BrowserAnimationsModule
   ],
