@@ -7,7 +7,7 @@ import { ICocktail, Ingredient } from './cocktail.interface';
   styleUrls: ['./cocktail.component.scss']
 })
 export class CocktailComponent implements OnInit {
-  @Input() cocktail: ICocktail | any;
+  @Input() cocktail!: ICocktail;
 
   ingredients: Ingredient[] = [];
 
@@ -18,15 +18,17 @@ export class CocktailComponent implements OnInit {
   }
 
   getIngredients(): void {
-    if (!this.cocktail) return;
+    const cocktail = this.cocktail as any;
+
+    if (!cocktail) return;
 
     let index: number = 1;
-    this.cocktail[`strIngredient${index}`];
+    cocktail[`strIngredient${index}`];
 
-    while (typeof this.cocktail[`strIngredient${index}`] === 'string') {
+    while (typeof cocktail[`strIngredient${index}`] === 'string') {
       this.ingredients.push({
-        ingredient: this.cocktail[`strIngredient${index}`] || '',
-        amount: this.cocktail[`strMeasure${index}`] || ''
+        ingredient: cocktail[`strIngredient${index}`] || '',
+        amount: cocktail[`strMeasure${index}`] || ''
       });
 
       index++;

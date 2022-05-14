@@ -10,7 +10,7 @@
   <mat-card-content>
     <mat-card-title>Ingredients:</mat-card-title>
     <mat-card-content>
-      <div style="width: 100%;" *ngFor="let ingredient of ingredients">
+      <div style="width: 100%; color: rgba(0,0,0,.54);" *ngFor="let ingredient of ingredients">
         <span>{{ingredient.ingredient}}</span>
         <span *ngIf="ingredient.amount !== ''"> - {{ingredient.amount}}</span>
       </div>
@@ -19,7 +19,7 @@
 
   <mat-card-content>
     <mat-card-title>Instructions:</mat-card-title>
-    <mat-card-content>
+    <mat-card-content style="width: 100%; color: rgba(0,0,0,.54);">
       {{cocktail.strInstructions}}
     </mat-card-content>
   </mat-card-content>
