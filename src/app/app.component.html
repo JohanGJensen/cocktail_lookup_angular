@@ -14,6 +14,7 @@
 <div class="content" role="main">
 
   <div class="cocktail-wrapper">
+    <span *ngIf="!drinks.length">No cocktails</span>
     <app-cocktail *ngFor="let drink of drinks" [cocktail]="drink">
     </app-cocktail>
   </div>
