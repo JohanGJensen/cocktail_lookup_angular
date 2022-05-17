@@ -1,8 +1,8 @@
 <mat-toolbar style="position: fixed; top: 0; z-index: 10;" color="primary">
   <mat-toolbar-row>
     <span class="toolbar-spacer"></span>
-    <input matInput placeholder="search a cocktail..." type="text" [(ngModel)]="value"
-      (ngModelChange)="onChange($event)">
+    <input matInput placeholder="search a cocktail..." type="text" [(ngModel)]="search"
+      (ngModelChange)="onChange(search)">
   </mat-toolbar-row>
 </mat-toolbar>
 

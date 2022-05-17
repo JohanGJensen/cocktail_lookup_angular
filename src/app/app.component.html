@@ -9,7 +9,7 @@
   @media screen and (max-width: 575px) {}
 </style>
 
-<app-toolbar></app-toolbar>
+<app-toolbar (searchEvent)="onSearch($event)"></app-toolbar>
 
 <div class="content" role="main">
 
